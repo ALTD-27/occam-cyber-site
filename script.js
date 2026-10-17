@@ -42,7 +42,7 @@ if (sim) {
   const STEPS = ['observe', 'understand', 'reason', 'act', 'assure'];
   const STEP_COPY = {
     observe: ['01 / OBSERVE', 'Events arrive from endpoints, cloud, identity, SaaS and AI agents. We resolve them into one operational picture, so every decision after this is made against the same view.'],
-    understand: ['02 / UNDERSTAND', 'We connect the event to the account, its owner, the data it can reach and the controls around it. That context decides how much it matters.'],
+    understand: ['02 / UNDERSTAND', 'We connect the event to the account, its owner, the data it can reach and the controls around it. We also check it against what is known about the attackers behind it. Context and intelligence together decide how much it matters.'],
     reason: ['03 / REASON', 'Agents raise every plausible explanation and test each one against the evidence, writing down why each is ruled out until one remains.'],
     act: ['04 / ACT', 'Anything beyond the limits you set waits for a named person. Agents propose, a person approves, then agents carry it out.'],
     assure: ['05 / ASSURE', 'Actions, approvals and outcomes are recorded as evidence you can hand to an auditor.'],
@@ -51,7 +51,7 @@ if (sim) {
   const APPROVED_BY = { you: 'Approved by you, the accountable person', analyst: 'Approved by the named analyst' };
   const beats = [
     { step: 'observe', dur: 1800, status: 'SIGNAL RECEIVED', log: ['agent', 'Alert raised for a first-time country'], fact: 'where' },
-    { step: 'observe', dur: 1700, log: ['agent', 'Sign-in, device and network logs pulled'] },
+    { step: 'observe', dur: 1700, log: ['agent', 'Logs pulled, address checked against threat intelligence'] },
     { step: 'understand', dur: 1500, status: 'RESOLVING CONTEXT', log: ['agent', 'Account, role and data access resolved'], fact: 'who' },
     { step: 'understand', dur: 1900, fact: ['session', 'reach'] },
     { step: 'reason', dur: 1500, status: 'TESTING EXPLANATIONS', log: ['agent', 'Five explanations raised and tested'], raise: true },

@@ -1,4 +1,4 @@
-// Lead capture: the contact / AI SOC demo form, campaign attribution and the mobile call to action.
+// Lead capture: the contact form, campaign attribution and the mobile call to action.
 // Its own file, loaded with defer on every page that has the form, so nothing in script.js (the services tabs,
 // the investigation simulation, the graph) can take the form down with it. No dependencies, no third parties.
 //
@@ -39,7 +39,7 @@
 
   // ---- mobile sticky call to action: after the hero, until the contact section is on screen -------------------
   const sticky = document.querySelector('.sticky-cta');
-  const hero = document.querySelector('.hero, .demo-hero');
+  const hero = document.querySelector('.hero');
   const contact = document.getElementById('contact') || document.getElementById('lead-card');
   const pageFooter = document.querySelector('.site-footer');
   if (sticky && hero && contact && 'IntersectionObserver' in window) {
@@ -66,10 +66,6 @@
   const loadedAt = Date.now();
 
   const MODES = {
-    demo: {
-      label: 'AI SOC DEMO', title: 'Book an AI SOC demo', submit: 'Request my demo', reply: 'We reply by email to arrange a time.',
-      sub: 'See how the agents work an alert, where a person decides and the evidence left behind.',
-    },
     talk: {
       label: 'CONTACT', title: 'Talk to us', submit: 'Send message', reply: 'We reply by email.',
       sub: 'Tell us what you run and what you need covered. If we are not the right fit, we will say so.',
@@ -77,10 +73,10 @@
   };
   const INTERESTS = { soc: 'Agentic SOC', grc: 'GRC & Strategy', products: 'Security Products', unsure: 'Not sure yet' };
 
-  const currentIntent = () => (form.querySelector('input[name="intent"]:checked') || {}).value || 'demo';
+  const currentIntent = () => (form.querySelector('input[name="intent"]:checked') || {}).value || 'talk';
 
   const setIntent = (intent, interest) => {
-    if (!MODES[intent]) intent = 'demo';
+    if (!MODES[intent]) intent = 'talk';
     const radio = form.querySelector(`input[name="intent"][value="${intent}"]`);
     if (radio) radio.checked = true;
     const mode = MODES[intent];
@@ -89,10 +85,9 @@
     $('lead-sub').textContent = mode.sub;
     $('lead-submit-label').textContent = mode.submit;
     if ($('lead-reply')) $('lead-reply').textContent = mode.reply;
-    // a demo is always about the Agentic SOC; a general enquiry lets the visitor say which line
-    interestWrap.hidden = intent === 'demo';
-    if (intent === 'demo') interestField.value = 'soc';
-    else if (interest && INTERESTS[interest]) interestField.value = interest;
+    // the visitor can say which service line they are asking about
+    interestWrap.hidden = false;
+    if (interest && INTERESTS[interest]) interestField.value = interest;
     else if (interestField.value === 'soc' && !interest) interestField.value = 'unsure';
   };
 
@@ -113,7 +108,7 @@
   // campaign links can open the form in a mode: /?intent=talk&interest=grc#contact
   const urlParams = new URLSearchParams(location.search);
   if (urlParams.get('intent')) setIntent(urlParams.get('intent'), urlParams.get('interest'));
-  else setIntent('demo');
+  else setIntent('talk');
 
   // ---- validation -----------------------------------------------------------------------------------------------
   const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
@@ -139,7 +134,7 @@
     const intent = currentIntent();
     return {
       intent,
-      interest: intent === 'demo' ? 'soc' : interestField.value,
+      interest: interestField.value,
       name: (data.get('name') || '').toString().trim(),
       email: (data.get('email') || '').toString().trim(),
       company: (data.get('company') || '').toString().trim(),
@@ -184,9 +179,7 @@
     $('lead-done-title').textContent = viaEmail ? `Nearly there, ${first}.` : `Thanks, ${first}.`;
     $('lead-done-copy').textContent = viaEmail
       ? 'Your email app should have opened with your details filled in. Nothing has been sent until you press send there.'
-      : (lead.intent === 'demo'
-        ? 'We have your demo request and will reply by email to arrange a time.'
-        : 'We have your message and will reply by email.');
+      : 'We have your message and will reply by email.';
     done.querySelector('.lead-manual')?.remove();
     if (viaEmail) {
       // webmail users have no mail app to open, so give them the message to send themselves

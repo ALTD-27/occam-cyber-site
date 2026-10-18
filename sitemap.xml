@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://occamcyber.com.au/</loc><lastmod>2026-09-30</lastmod></url>
+  <url><loc>https://occamcyber.com.au/insights/</loc><lastmod>2026-10-18</lastmod></url>
+  <url><loc>https://occamcyber.com.au/insights/agentic-soc-explained/</loc><lastmod>2026-10-18</lastmod></url>
+  <url><loc>https://occamcyber.com.au/insights/managed-detection-and-response-australia/</loc><lastmod>2026-10-18</lastmod></url>
+  <url><loc>https://occamcyber.com.au/insights/threat-intelligence-for-mid-sized-organisations/</loc><lastmod>2026-10-18</lastmod></url>
+  <url><loc>https://occamcyber.com.au/insights/dark-web-exposure/</loc><lastmod>2026-10-18</lastmod></url>
+  <url><loc>https://occamcyber.com.au/insights/essential-eight-and-your-soc/</loc><lastmod>2026-10-18</lastmod></url>
+  <url><loc>https://occamcyber.com.au/insights/ransomware-payment-reporting-australia/</loc><lastmod>2026-10-18</lastmod></url>
 </urlset>

@@ -71,7 +71,7 @@
       sub: 'Tell us what you run and what you need covered. If we are not the right fit, we will say so.',
     },
   };
-  const INTERESTS = { soc: 'Agentic SOC', grc: 'GRC & Strategy', products: 'Security Products', unsure: 'Not sure yet' };
+  const INTERESTS = { soc: 'Agentic SOC', intel: 'Threat intelligence', grc: 'GRC & Strategy', products: 'Security Products', unsure: 'Not sure yet' };
 
   const currentIntent = () => (form.querySelector('input[name="intent"]:checked') || {}).value || 'talk';
 

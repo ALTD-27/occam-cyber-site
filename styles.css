@@ -306,3 +306,16 @@ footer.site-footer{display:block;padding:60px var(--gutter) 30px;background:#041
 @media(max-width:980px){.intel-head{grid-template-columns:1fr;gap:25px}.intel-grid{grid-template-columns:1fr;margin-top:38px}.intel-card,.intel-card+.intel-card{padding:24px 0 4px;border-left:0}.intel-card+.intel-card{border-top:1px solid #8eabbc22}.intel-head>p{font-size:16px;max-width:570px}}
 @media(max-width:800px){.intel{padding:78px 0 82px}.intel h2{font-size:44px}}
 @media(max-width:480px){.intel h2{font-size:36px}.intel-sources{font-size:12px}}
+
+/* ===== Threat intelligence offerings, added 18 Oct 2026 ===== */
+.intel-offers{margin-top:52px;padding-top:30px;border-top:1px solid #8eabbc30}
+.intel-offers-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px 40px}
+.intel-offers-head small{display:block;font:11px/1.6 var(--mono);letter-spacing:.14em;color:#83b7c3}
+.intel-offers-head h3{margin:8px 0 0;font-size:clamp(23px,2.1vw,31px);font-weight:600;letter-spacing:-.04em;line-height:1.18;color:#eef6fa}
+.intel-offer-list{display:grid;grid-template-columns:repeat(4,1fr);margin-top:28px}
+.intel-offer{padding:0 28px 6px 0}
+.intel-offer+.intel-offer{padding-left:28px;border-left:1px solid #8eabbc22}
+.intel-offer b{display:block;margin-bottom:8px;font-size:17px;font-weight:600;letter-spacing:-.02em;color:#eef6fa}
+.intel-offer span{display:block;font-size:14px;line-height:1.65;color:#a5bbca}
+@media(max-width:1150px){.intel-offer-list{grid-template-columns:1fr 1fr;row-gap:28px}.intel-offer,.intel-offer+.intel-offer{padding:0 24px 0 0;border-left:0}.intel-offer:nth-child(even){padding:0 0 0 24px;border-left:1px solid #8eabbc22}}
+@media(max-width:700px){.intel-offer-list{grid-template-columns:1fr;row-gap:22px}.intel-offer,.intel-offer+.intel-offer,.intel-offer:nth-child(even){padding:0;border-left:0}.intel-offers-head .button{width:100%;justify-content:center}}

@@ -423,3 +423,5 @@ footer.site-footer{display:block;padding:60px var(--gutter) 30px;background:#041
 @media print{.reveal-ready .uplift-grid .ub,.reveal-ready .uplift-loop li{transform:none!important;opacity:1!important}}
 nav a{white-space:nowrap}
 @media(max-width:1300px) and (min-width:801px){nav a[href="#context"]{display:none}}
+.program-name{font-weight:700;color:var(--orange)}
+.statement .program-name{color:#c25f22}

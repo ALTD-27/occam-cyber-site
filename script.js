@@ -215,7 +215,7 @@ if (!reducedMotion && 'IntersectionObserver' in window) {
     if (!entry.isIntersecting) return;
     entry.target.classList.add('is-in');
     revealer.unobserve(entry.target);
-  }), { threshold: 0.12 });
+  }), { threshold: 0, rootMargin: '0px 0px -6% 0px' });
   document.querySelectorAll('[data-reveal], .closing-art').forEach((el) => revealer.observe(el));
   window.addEventListener('beforeprint', () => document.querySelectorAll('[data-reveal], .closing-art').forEach((el) => el.classList.add('is-in')));
 }

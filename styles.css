@@ -1,22 +1,15 @@
 /* Fonts are self-hosted in assets/fonts so no visitor data goes to a third party, which is
-   what the page's own sovereignty line promises. Manrope and DM Mono are OFL licensed, so
-   serving them from here is permitted. To refresh them, fetch the Google Fonts css2 sheet
-   for Manrope 400;500;600;700 and DM Mono 400, download the latin and latin-ext woff2 files
-   and regenerate the @font-face rules below. Manrope is one variable file per subset, which
-   is why four weights point at the same file. */
-/* Self-hosted so no visitor data goes to a third party. Manrope and DM Mono are OFL licensed. Regenerate with _source notes. */
-@font-face{font-family:'DM Mono';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/dm-mono-var-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF}
-@font-face{font-family:'DM Mono';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/dm-mono-var-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
-@font-face{font-family:'Manrope';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/manrope-var-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF}
-@font-face{font-family:'Manrope';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/manrope-var-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
-@font-face{font-family:'Manrope';font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/manrope-var-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF}
-@font-face{font-family:'Manrope';font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/manrope-var-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
-@font-face{font-family:'Manrope';font-style:normal;font-weight:600;font-display:swap;src:url(assets/fonts/manrope-var-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF}
-@font-face{font-family:'Manrope';font-style:normal;font-weight:600;font-display:swap;src:url(assets/fonts/manrope-var-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
-@font-face{font-family:'Manrope';font-style:normal;font-weight:700;font-display:swap;src:url(assets/fonts/manrope-var-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF}
-@font-face{font-family:'Manrope';font-style:normal;font-weight:700;font-display:swap;src:url(assets/fonts/manrope-var-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+   what the privacy page promises. IBM Plex Sans, IBM Plex Mono and Newsreader are OFL licensed.
+   To refresh them, fetch the Google Fonts css2 sheet for these families and download the
+   latin and latin-ext woff2 files. Plex Sans and Newsreader are variable files. */
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:400 700;font-display:swap;src:url(assets/fonts/plex-sans-var-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:400 700;font-display:swap;src:url(assets/fonts/plex-sans-var-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/plex-mono-400-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}
+@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/plex-mono-400-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'Newsreader';font-style:normal;font-weight:400 600;font-display:swap;src:url(assets/fonts/newsreader-var-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}
+@font-face{font-family:'Newsreader';font-style:normal;font-weight:400 600;font-display:swap;src:url(assets/fonts/newsreader-var-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
 
-:root{--ink:#061a2c;--night:#030e1a;--paper:#f5f7f8;--white:#f6f9fc;--orange:#f18443;--cyan:#73dcd7;--muted:#a6b8c8;--gutter:clamp(24px,6.25vw,120px);--mono:'DM Mono',ui-monospace,SFMono-Regular,'Cascadia Mono',Consolas,monospace;--body:Manrope,'Segoe UI',system-ui,Arial,sans-serif}
+:root{--ink:#061a2c;--night:#030e1a;--paper:#f5f7f8;--white:#f6f9fc;--orange:#f18443;--cyan:#73dcd7;--muted:#a6b8c8;--gutter:clamp(24px,6.25vw,120px);--mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,'Cascadia Mono',Consolas,monospace;--body:'IBM Plex Sans','Segoe UI',system-ui,Arial,sans-serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:30px}body{margin:0;color:var(--ink);background:var(--night);font-family:var(--body);-webkit-font-smoothing:antialiased}button,a{-webkit-tap-highlight-color:transparent}button{font:inherit}a{color:inherit;text-decoration:none}button,a{touch-action:manipulation}button:focus-visible,a:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--orange);outline-offset:6px}p{line-height:1.75}h1,h2,h3,p{margin:0}button{cursor:pointer}::selection{background:#f1844370;color:inherit}.skip-link{position:absolute;left:20px;top:-70px;z-index:100;padding:16px;background:var(--white);color:var(--ink)}.skip-link:focus{top:16px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}.print-only{display:none}
 .site-header{position:absolute;top:0;left:0;right:0;height:112px;padding:0 var(--gutter);z-index:10;display:flex;align-items:center;gap:40px;color:var(--white)}.site-header::after{content:'';position:absolute;bottom:0;left:var(--gutter);right:var(--gutter);height:1px;background:#b3c7d51c}.brand{width:188px;display:block;flex:none}.brand-logo{width:100%;height:auto;display:block;overflow:hidden}nav{display:flex;align-items:center;gap:32px;margin-left:auto}nav a{font-size:15.5px;font-weight:500;color:#b9c8d4;transition:color .2s}nav a:hover{color:white}.header-cta{display:inline-flex;gap:25px;align-items:center;min-height:44px;padding:0 18px;border:1px solid #abbccc50;border-radius:3px;font-size:15.5px;font-weight:600;transition:background .2s,border-color .2s}.header-cta:hover{border-color:var(--orange);background:#f1844315}.header-cta span{color:var(--orange)}
 .hero{position:relative;min-height:840px;isolation:isolate;overflow:hidden;background:var(--night);color:var(--white);padding:212px var(--gutter) 177px}.hero::after{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,#030e1a 3%,#030e1aeb 22%,#030e1a8c 42%,transparent 69%),linear-gradient(0deg,#030e1a 1%,transparent 24%)}.hero-copy{position:relative;z-index:2;width:min(58%,820px)}.eyebrow,.section-kicker,.live-label,.panel-label{font:400 13px/1.6 var(--mono);letter-spacing:.12em}.eyebrow{display:flex;align-items:center;gap:12px;color:#bdd1dd}.brand-slash{display:inline-block;width:10px;height:25px;background:var(--orange);transform:skewX(-27deg);flex-shrink:0}.eyebrow .brand-slash{height:16px;width:5px}.hero h1{font-size:clamp(55px,5.1vw,98px);line-height:1.05;font-weight:600;letter-spacing:-.057em;margin:28px 0}.hero h1>span{display:block}.hero h1 em{font-style:normal;color:var(--orange);font-weight:500}.hero h1>span:last-child{max-width:10.5em}.hero-copy>p{max-width:470px;color:#b0c2d0;font-size:18px;line-height:1.75}.hero-actions{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin-top:35px}.button{display:inline-flex;align-items:center;justify-content:center;gap:23px;min-height:52px;padding:0 22px;border-radius:3px;font-size:15.5px;font-weight:700;transition:background .2s,transform .2s,border-color .2s}.button-primary{background:var(--orange);color:#111d29;border:1px solid var(--orange)}.button-primary:hover{background:#ff9c63;border-color:#ff9c63;transform:translateY(-2px)}.button-quiet{border:1px solid #acbfce40;color:#dce6ed;background:#03101b33}.button-quiet:hover{border-color:#bdd5e0;color:white}.hero-metrics{position:absolute;bottom:0;left:var(--gutter);right:var(--gutter);z-index:2;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #b3c7d52e;border-bottom:1px solid #b3c7d52e;padding:28px 0 33px}.hero-metrics div{display:flex;align-items:center;gap:16px;font-size:15.5px;font-weight:500;color:#bacbd7}.hero-metrics div+div{padding-left:28px;border-left:1px solid #b3c7d526}.hero-metrics strong{font:13px var(--mono);color:var(--orange)}.hero-metrics em{font:400 12px var(--mono);font-style:normal;letter-spacing:.1em;color:#dceaf2}.hero-metrics em::after{content:'·';margin:0 5px 0 9px;color:#7791a3;letter-spacing:0}
@@ -425,3 +418,51 @@ nav a{white-space:nowrap}
 @media(max-width:1300px) and (min-width:801px){nav a[href="#context"]{display:none}}
 .program-name{font-weight:700;color:var(--orange)}
 .statement .program-name{color:#c25f22}
+
+/* Visual pass, 10 Nov 2026: serif display type, hero flow diagram, sturdier scroll reveals */
+:root{--display:'Newsreader',Georgia,'Times New Roman',serif}
+h1,h2{font-family:var(--display);font-weight:500!important;letter-spacing:-.022em!important;font-optical-sizing:auto}
+h3,h4{letter-spacing:-.018em!important}
+.statement h2 span,.intel h2 span{font-weight:400}
+.hero h1{font-size:clamp(44px,4.5vw,80px)!important;line-height:1.04;margin:26px 0}
+.hero h1>span,.hero h1>span:last-child{max-width:none!important}
+.hero h1 em{font-weight:500}
+@media(min-width:981px){.hero-copy{width:min(47%,680px)!important}}
+@media(max-width:800px){.hero h1{font-size:clamp(38px,10.6vw,54px)!important}}
+.reveal-ready [data-reveal]{opacity:.001;transform:translateY(12px);transition:opacity .5s ease-out,transform .5s ease-out}
+nav a{font-weight:500}
+
+.hero-visual.hero-flow{position:absolute;inset:112px var(--gutter) 96px auto;width:min(44%,660px);z-index:1;opacity:1;perspective:none;display:flex;flex-direction:column;justify-content:center}
+.hero-visual.hero-flow::after{display:none}
+.hero-flow svg{display:block;width:100%;height:auto;overflow:visible}
+.hero-flow .fx-card{fill:#0b2539;stroke:#2c4a60}
+.hero-flow .fx-razor{fill:#061a2ce6;stroke:#1f8a87;stroke-width:1.5}
+.hero-flow .fx-inner{fill:#1f8a8738;stroke:#73dcd766}
+.hero-flow .fx-human{fill:#030e1a;stroke:var(--orange);stroke-width:1.5}
+.hero-flow .fx-t{font:600 15px var(--body);fill:#eef6fa}
+.hero-flow .fx-big{font:600 17px var(--body);fill:#eef6fa}
+.hero-flow .fx-sub{font:10.5px var(--mono);letter-spacing:.04em;fill:#8fa8b9}
+.hero-flow .fx-label{font:12px var(--mono);letter-spacing:.24em;fill:var(--cyan)}
+.hero-flow .fx-or{fill:var(--orange)}
+.hero-flow .fx-line{fill:none;stroke:#1f8a87;stroke-width:1.25}
+.hero-flow .fx-arrow{fill:none;stroke:var(--cyan);stroke-width:1.75}
+.hero-flow .fx-pk{fill:none;stroke:var(--cyan);stroke-width:2.5;stroke-linecap:round;stroke-dasharray:3 150;animation:fx-flow 3.2s linear infinite}
+.hero-flow .fx-pk:nth-of-type(2){animation-delay:-.8s}.hero-flow .fx-pk:nth-of-type(3){animation-delay:-1.6s}.hero-flow .fx-pk:nth-of-type(4){animation-delay:-2.4s}
+.hero-flow .fx-graph{fill:#1f8a87;stroke:var(--cyan);stroke-width:2}
+.hero-flow .fx-node{fill:#eef6fa}.hero-flow .fx-edge{stroke:#eef6fab0;stroke-width:1.5}
+.hero-flow .fx-halo{fill:none;stroke:#73dcd740;stroke-dasharray:2 7;transform-origin:522px 150px;animation:fx-spin 40s linear infinite}
+.hero-flow .fx-bar{fill:var(--cyan)}
+.flow-caption{display:flex;align-items:center;gap:10px;margin:18px 0 0;font:12px/1.5 var(--mono);letter-spacing:.08em;color:#8fa8b9}
+@keyframes fx-flow{from{stroke-dashoffset:153}to{stroke-dashoffset:0}}
+@keyframes fx-spin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.hero-flow .fx-pk,.hero-flow .fx-halo{animation:none}.hero-flow .fx-pk{display:none}}
+@media(max-width:1250px) and (min-width:981px){.hero-visual.hero-flow{width:46%}}
+@media(max-width:980px){
+  .hero{min-height:0!important}
+  .hero-visual.hero-flow{position:relative;inset:auto;width:100%;max-width:620px;margin:46px 0 0}
+}
+@media(max-width:600px){
+  .hero-flow .fx-t{font-size:20px}.hero-flow .fx-big{font-size:21px}.hero-flow .fx-sub{display:none}
+  .hero-flow .fx-label{font-size:16px}.hero-flow .fx-t.fx-or{font-size:16.5px}
+}
+@media print{.hero-visual.hero-flow{display:none}}
